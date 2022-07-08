@@ -1,0 +1,47 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=GeodiversityCalculator
+qgisMinimumVersion=3.0
+description=This plugin calculates geodiversity over a custom polygon.
+version=1.0
+author=Marton Pal
+email=pal.marton@inf.elte.hu
+
+about=This plugin calculates geodiversity over a custom polygon. These are the thematic subindices: geology, soil, relief, hydrography (line and polygon features), mineralogy and palaeontology.  Mostly QGIS proccessing tools and Saga tools are implemented in the code.
+
+tracker=https://github.com/marchello-map/geodiversity_plugin/issues
+repository=https://github.com/marchello-map/geodiversity_plugin/blob/main/source_geodiv_v1_00
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python
+
+homepage=http://terkep.elte.hu
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+
