@@ -591,7 +591,7 @@ class GeodiversityCalculator:
             if self.dlg.lineEdit_9.text():
                 #fill DEM
                 filled_output5 = working_dir + "/filled_dem.sdat"
-                processing.run("saga:fillsinkswangliu",
+                processing.run("sagang:fillsinkswangliu",
                     {'ELEV':full_dem2,
                     'FILLED':filled_output5,
                     'FDIR':'TEMPORARY_OUTPUT',
@@ -599,7 +599,7 @@ class GeodiversityCalculator:
                     'MINSLOPE':0.1})
                 #Strahler order
                 strahler_output5 = working_dir + "/strahler.sdat"
-                processing.run("saga:strahlerorder",
+                processing.run("sagang:strahlerorder",
                     {'DEM':filled_output5,
                     'STRAHLER':strahler_output5})
                 #Zonal stats - Strahler
