@@ -6,6 +6,7 @@ In case of any question, write to: pal.marton@inf.elte.hu
 
 Update: 28 April 2025: Geodiversity Calculator v1.01 is published
   - This version works with SAGA NextGen.
+
 Update 6 July 2022: Geodiversity Calculator v1.00 is published
   - You can change what subindeces to produce
   - Placeholder texts are written inside line edits to give clearer instructions
