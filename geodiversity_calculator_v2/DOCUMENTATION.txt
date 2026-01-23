@@ -1,0 +1,131 @@
+# Geodiversity Calculator v2.0 – Documentation
+
+## 1. Purpose
+
+The **Geodiversity Calculator v2.0** is a QGIS plugin designed to calculate spatial geodiversity indices on a regular grid. It integrates geological, pedological, geomorphological, mineralogical, palaeontological, and hydrographic information into comparable subindices and produces a final geodiversity map.
+
+The plugin is intended for **research, teaching, and applied geodiversity assessment**, with a focus on transparency, reproducibility, and cartographic usability.
+
+---
+
+## 2. Input data
+
+The plugin requires the following inputs:
+
+* **Boundary layer** (polygon)
+
+  * Defines the spatial extent of the analysis.
+
+* **Thematic vector layers** (polygon / line / point as appropriate):
+
+  * Geological units
+  * Pedological units
+  * Geomorphological units
+  * Mineralogical occurrences
+  * Palaeontological occurrences
+  * Hydrography (stream network with Strahler order, lakes)
+
+All layers should be in a **projected CRS** (meters).
+
+---
+
+## 3. Grid creation
+
+### 3.1 Grid geometry
+
+Users can select the spatial unit geometry for the analysis grid:
+
+* **Rectangle** (TYPE = 2)
+* **Diamond** (TYPE = 3)
+* **Hexagon** (TYPE = 4)
+
+Exactly one geometry type must be selected.
+
+### 3.2 Grid spacing (H–V spacing)
+
+* Grid spacing can be **entered manually**, or
+* **Automatically suggested** based on the boundary area.
+
+Automatic suggestions use explicit **area intervals (km²)** to avoid inappropriate defaults for small or large study areas.
+
+The spacing fields are only filled automatically **after a boundary is selected**, and manual overrides are always possible.
+
+---
+
+## 4. Subindex calculation
+
+For each grid cell, the plugin calculates thematic subindices based on the number or diversity of features intersecting the cell:
+
+* Geological subindex
+* Pedological subindex
+* Geomorphological subindex
+* Mineralogical subindex
+* Palaeontological subindex
+* Hydrographic subindex
+
+  * Computed as the sum of **Strahler order values and lake values**
+
+Temporary or intermediate fields (e.g. `r_value`) are removed once they are no longer needed.
+
+---
+
+## 5. Optional normalization
+
+An optional setting allows **normalization of all subindices**:
+
+* Each subindex is divided by its **maximum value** across the grid
+* Normalized values range from **0 to 1**
+
+When enabled:
+
+* Normalized fields (`N_geol`, `N_pedo`, …) are added
+* A summary field **`N_sum`** is calculated as the sum of all normalized subindices
+
+Normalization helps reduce thematic dominance caused by differing data scales.
+
+---
+
+## 6. Final output
+
+The main output is a **grid layer** containing:
+
+* Raw subindex values
+* Optional normalized subindex values
+* Final geodiversity sum (raw or normalized)
+
+The output grid is automatically styled using:
+
+* **Graduated colors**
+* **Natural Breaks (Jenks)** classification
+* **Reds** color ramp
+
+---
+
+## 7. Performance and behavior
+
+* Unnecessary intermediate rasters and temporary files are not saved
+* The progress bar updates correctly during processing
+* The plugin remains responsive during long runs
+
+---
+
+## 8. Typical workflow
+
+1. Load all required thematic layers
+2. Select the boundary polygon
+3. Choose grid geometry and spacing
+4. (Optional) Enable subindex normalization
+5. Run the calculation
+6. Inspect and export the resulting geodiversity grid
+
+---
+
+## 9. Notes and limitations
+
+* Large datasets may require coarse grid spacing for performance reasons
+* Input data quality strongly influences results
+* The plugin does not modify original geometries, only attribute fields when explicitly required
+
+---
+
+**Geodiversity Calculator v2.0** is designed as a transparent and extensible tool; users are encouraged to adapt grid resolution and normalization choices to their specific research questions.
