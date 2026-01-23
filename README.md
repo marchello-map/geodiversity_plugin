@@ -4,15 +4,7 @@ By default, you shall unpack the zipped folder here: C:\Users\**user**\AppData\R
 
 In case of any question, write to: pal.marton@inf.elte.hu
 
-Update: 28 April 2025: Geodiversity Calculator v1.01 is published
-  - This version works with SAGA NextGen.
-
-Update 6 July 2022: Geodiversity Calculator v1.00 is published
-  - You can change what subindeces to produce
-  - Placeholder texts are written inside line edits to give clearer instructions
-  - A reset button is added to clear all line edits at one click
-
-Update 23 January 2025: Geodiversity Calculator v2.0 is published
+Update 23 January 2026: Geodiversity Calculator v2.0 is published
   - new design
   - smoother run
   - built-in error handling
@@ -21,3 +13,12 @@ Update 23 January 2025: Geodiversity Calculator v2.0 is published
   - grid unit shapes can be selected: rectangle, diamond, hexagon
   - automatic grid spacing suggestion is corrected and other categories are inputted
   - the code has been cleaned
+
+Update: 28 April 2025: Geodiversity Calculator v1.01 is published
+  - This version works with SAGA NextGen.
+
+Update 6 July 2022: Geodiversity Calculator v1.00 is published
+  - You can change what subindeces to produce
+  - Placeholder texts are written inside line edits to give clearer instructions
+  - A reset button is added to clear all line edits at one click
+
