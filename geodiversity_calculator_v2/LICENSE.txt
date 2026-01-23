@@ -1,8 +1,8 @@
 GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
 
-Copyright (C) 2021-2022 M·rton P·l (Original Plugin)
-Copyright (C) 2025-2026 M·rton P·l & Emmanuel Owusu-Acheampong
+Copyright (C) 2021-2022 M√°rton P√°l (Original Plugin)
+Copyright (C) 2025-2026 M√°rton P√°l & Emmanuel Owusu-Acheampong
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,14 +23,14 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 GEODIVERSITY CALCULATOR v2.0
 
 Based on original work by:
-  M·rton P·l (2021-2022)
+  M√°rton P√°l (2021-2022)
   Email: pal.marton@inf.elte.hu
   
 Enhanced by:
-  M·rton P·l & Emmanuel Owusu-Acheampong
+  M√°rton P√°l & Emmanuel Owusu-Acheampong
   
 Methodology based on research by:
-  - Pereira et al. (Paran· State, Brazil)
-  - P·l et al. (Bakony-Balaton UNESCO Geopark, Hungary)
+  - Pereira et al. (Paran√° State, Brazil)
+  - P√°l et al. (Bakony-Balaton UNESCO Geopark, Hungary)
 
 ================================================================================
