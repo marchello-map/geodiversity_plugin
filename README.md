@@ -4,6 +4,11 @@ By default, you shall unpack the zipped folder here: C:\Users\**user**\AppData\R
 
 In case of any question, write to: pal.marton@inf.elte.hu
 
+Update 28 January 2026: Geodiversity Calculator v2.1 is published
+  - no more experimental
+  - geology and pedology assessments work without rasterization
+  - intermediate layers can be left "silent": users can select whether they want to add them or just the final layer to QGIS
+
 Update 23 January 2026: Geodiversity Calculator v2.0 is published
   - new design
   - smoother run
