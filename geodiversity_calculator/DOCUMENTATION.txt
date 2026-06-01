@@ -1,0 +1,98 @@
+Geodiversity Calculator v2.1.1 – Documentation
+
+1. Purpose
+
+The Geodiversity Calculator v2.1.1 is a QGIS plugin designed to calculate spatial geodiversity indices on a regular grid. It integrates geological, pedological, geomorphological, mineralogical, palaeontological, and hydrographic information into comparable subindices and produces a final geodiversity map.
+Version 2.1.1 improves robustness, performance, and usability while preserving the original methodological design.
+The plugin is intended for research, teaching, and applied geodiversity assessment, with a focus on transparency, reproducibility, and cartographic usability.
+
+---
+
+2. Input data
+
+2.1 Boundary layer
+- Polygon vector layer
+- Defines the spatial extent of the analysis
+
+2.2 Thematic layers
+- Geological units (polygon)
+- Pedological units (polygon)
+- Digital Elevation Model (DEM) (raster)
+- Hydrography
+  - Stream network (Strahler order derived internally)
+  - Lakes / water bodies (polygon)
+- Mineralogical occurrences (point)
+- Palaeontological occurrences (point)
+
+All spatial data should be provided in a projected CRS (meters).
+
+---
+
+3. Grid creation
+
+3.1 Grid geometry
+- Rectangle (TYPE = 2)
+- Diamond (TYPE = 3)
+- Hexagon (TYPE = 4)
+
+For diamond and hexagon grids, v2.1 applies a minimal, spacing-aware extent expansion to ensure full boundary coverage.
+
+3.2 Grid spacing
+Spacing can be entered manually or automatically suggested based on boundary area using explicit area intervals (km²).
+
+---
+
+4. Subindex calculation
+
+Geological and pedological subindices are calculated using pure vector-based “any-touch” logic. A grid cell counts a unit if it intersects or touches a polygon.
+Geomorphological subindex is derived from DEM using geomorphon classification.
+Hydrographic subindex is computed as the sum of maximum Strahler order and lake presence.
+Mineralogical and palaeontological subindices are based on point-in-polygon counts.
+Temporary helper fields are removed once no longer required.
+
+---
+
+5. Optional normalization
+
+Subindices can be normalized to a 0–1 range by dividing by their maximum values. When enabled, normalized fields and a summary field (N_sum) are added.
+
+---
+
+6. Output behavior
+
+The final geodiversity grid is always written to disk and added to the QGIS project.
+Intermediate layers:
+- Unchecked (default): intermediate layers are computed but not opened in QGIS; temporary outputs are used.
+- Checked: all intermediate layers are opened in QGIS.
+
+---
+
+7. Styling
+
+Final output is styled automatically using graduated colors, Jenks classification, and a Reds color ramp.
+
+---
+
+8. Performance and stability
+
+Version 2.1 improves performance through reduced disk I/O, optimized spatial queries, improved grid coverage, and reduced UI overhead.
+
+---
+
+9. Typical workflow
+
+1. Load datasets
+2. Select boundary
+3. Choose grid geometry and spacing
+4. Optional normalization
+5. Optional opening of intermediate layers
+6. Run calculation
+7. Inspect final grid
+
+---
+
+10. Notes and limitations
+
+- Large areas may require coarse grids
+- Data quality strongly influences results
+- Original geometries are not modified

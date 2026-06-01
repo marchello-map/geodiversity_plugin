@@ -1,0 +1,27 @@
+# This file contains metadata for your plugin.
+
+[general]
+name=GeodiversityCalculator
+qgisMinimumVersion=4.0
+description=This plugin calculates geodiversity over a custom polygon.
+version=2.1.2
+author=Marton Pal, Emmanuel Owusu-Acheampong
+email=pal.marton@inf.elte.hu
+
+about=This plugin calculates geodiversity over a custom polygon. Thematic subindices: geology, soil, relief, hydrography (line and polygon features), mineralogy and palaeontology. Version 2.1.2 adds QGIS 4.0 / Qt6 / PyQt6 compatibility, a self-contained Strahler stream-order computation (no SAGA or GRASS add-ons required), and clear on-screen feedback when components are skipped or fail.
+
+tracker=https://github.com/marchello-map/geodiversity_plugin/issues
+repository=https://github.com/marchello-map/geodiversity_plugin
+license=https://github.com/marchello-map/geodiversity_plugin/blob/main/geodiversity_calculator_v2/LICENSE.txt
+
+hasProcessingProvider=no
+
+tags=python,geodiversity,geology,geomorphology,grid
+
+homepage=http://terkep.elte.hu
+category=Plugins
+icon=icon.png
+experimental=False
+deprecated=False
+
+server=False
