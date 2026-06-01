@@ -1,8 +1,15 @@
 # geodiversity_plugin
 An open-source QGIS tool for geodiversity assessment.
-By default, you shall unpack the zipped folder here: C:\Users\**user**\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
 
 In case of any question, write to: pal.marton@inf.elte.hu
+
+Update 1 June 2026: Geodiversity Calculator v2.1.2 is published
+
+  - compatible with QGIS 4.0 (Qt6 / PyQt6); for QGIS 3.x, use v2.1
+  - hydrography works without SAGA — Strahler stream order is now computed inside the plugin, so no extra packages need to be installed
+  - hydrography subindex corrected: a cell with a lake scores 3, otherwise it gets round(Strahler ÷ 2) capped at 3 (not the sum of the two)
+  - clear on-screen feedback: a message confirms completion, and any skipped or failed subindices are reported instead of failing silently
+  - code cleaned and de-duplicated
 
 Update 28 January 2026: Geodiversity Calculator v2.1 is published
   - no more experimental
